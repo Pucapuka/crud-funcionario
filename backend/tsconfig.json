@@ -1,19 +1,15 @@
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
     // File Layout
     "rootDir": "./src",
     "outDir": "./dist",
 
-    // Environment Settings
-    // See also https://aka.ms/tsconfig/module
-    "module": "esnext",
+    // Environment Settings - ES MODULES (compatível com import/export)
+    "module": "NodeNext",           // 👈 Usar NodeNext para ESM
+    "moduleResolution": "NodeNext", // 👈 NodeNext para resolver imports
     "target": "es2023",
     "types": ["node"],
-    // For nodejs:
-    // "lib": ["esnext"],
-    // "types": ["node"],
-    // and npm install -D @types/node
+    "lib": ["es2023"],
 
     // Other Outputs
     "sourceMap": true,
@@ -24,29 +20,17 @@
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
 
-    // Style Options
-    // "noImplicitReturns": true,
-    // "noImplicitOverride": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "noFallthroughCasesInSwitch": true,
-    // "noPropertyAccessFromIndexSignature": true,
+    // CRÍTICO: Desabilitar opções problemáticas
+    "emitDeclarationOnly": true,    // 👈 Required for allowImportingTsExtensions
+    "allowImportingTsExtensions": true, // 👈 Não permitir import .ts
 
     // Recommended Options
     "strict": true,
-    "jsx": "react-jsx",
-    "verbatimModuleSyntax": false,
-    "isolatedModules": true,
-    "noUncheckedSideEffectImports": true,
-    "moduleDetection": "force",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "bundler",
     "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "emitDeclarationOnly": true,
-    "allowImportingTsExtensions": true
+    "skipLibCheck": true
   },
-  "include": ["src/**/*", "src/models"],
-  "exclude": ["node_modules"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }

@@ -1,7 +1,7 @@
 import express, {Request, Response} from 'express';
 import cors from 'cors';
-import {homeRouter} from './routes/homeRoutes.ts';
-import {funcionarioRouter} from './routes/funcionarioRoutes.ts';
+import {homeRouter} from './routes/homeRoutes.js';
+import {funcionarioRouter} from './routes/funcionarioRoutes.js';
 
 const app = express();
 const PORT = process.env.PORT || '3000';

@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
-import { prisma } from '../lib/prisma';
+import { prisma } from '../lib/prisma.js';
+import { Funcionario, FuncionarioJson } from '../models/Funcionario.js';
 
 // Funções auxiliares para validação
 const getParamId = (params: any): string | undefined => {

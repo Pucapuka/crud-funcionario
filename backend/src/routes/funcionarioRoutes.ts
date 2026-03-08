@@ -5,7 +5,7 @@ import {
     excluirFuncionario, 
     editarFuncionario, 
     listarFuncionariosPorId 
-} from '../controllers/funcionarioController';
+} from '../controllers/funcionarioController.js';
 
 const funcionarioRouter = Router();
 
