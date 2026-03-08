@@ -16,6 +16,10 @@ app.use(express.json());
 
 app.use('/api', funcionarioRouter);
 app.use(homeRouter);
-app.listen(PORT, () => {
-    console.log("Application running on port ", PORT);
-})
+
+//Em produção, no deploy, não uso o listen
+// app.listen(PORT, () => {
+//     console.log("Application running on port ", PORT);
+// })
+
+export default app;
