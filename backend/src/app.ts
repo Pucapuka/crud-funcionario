@@ -5,6 +5,7 @@ import {funcionarioRouter} from './routes/funcionarioRoutes.js';
 
 const app = express();
 const PORT = process.env.PORT || '3000';
+const HOST = '0.0.0.0';
 
 app.use(cors({
     origin: 'http://localhost:5173',
@@ -17,9 +18,6 @@ app.use(express.json());
 app.use('/api', funcionarioRouter);
 app.use(homeRouter);
 
-//Em produção, no deploy, não uso o listen
-// app.listen(PORT, () => {
-//     console.log("Application running on port ", PORT);
-// })
-
-export default app;
+app.listen(Number(PORT), HOST, () => {
+    console.log(`Application running on http://${HOST}: ${PORT}`);
+})
