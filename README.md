@@ -163,6 +163,7 @@ POST /api/funcionario
 - **FuncionariosPage**: Página principal integrando tudo
 
 ### Estilização
+Nesse projeto, pratiquei a estilização inline com objetos JavaScript (CSS in JS)
 ```typescript
 // Estilos organizados por componente
 const styles = {
@@ -211,7 +212,7 @@ npm test
 
 ## 📝 Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto está sob a licença MIT.
 
 ## 👨‍💻 Autor
 
@@ -221,19 +222,9 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ## ⭐ Agradecimentos
 
-Agradecimento especial à comunidade open source e a todos que contribuíram com feedbacks durante o desenvolvimento deste projeto.
+Agradecimento especial à comunidade open source e a todos que possam contribuir com feedbacks durante o desenvolvimento deste projeto.
 
 ---
 
 **Desenvolvido com ❤️ e TypeScript**
 ```
-
-Este README inclui:
-- ✅ Badges profissionais
-- ✅ Estrutura clara do projeto
-- ✅ Tecnologias utilizadas
-- ✅ Instruções de instalação detalhadas
-- ✅ Documentação da API
-- ✅ Exemplos de código
-- ✅ Seção de contribuição
-- ✅ Informações do autor
