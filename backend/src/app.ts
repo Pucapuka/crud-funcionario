@@ -7,8 +7,14 @@ const app = express();
 const PORT = process.env.PORT || '3000';
 const HOST = '0.0.0.0';
 
+const allowedOrigins = [
+    'http://localhost:5173' ,
+    'https://crud-funcionario-git-main-paulo-anderson-limas-projects.vercel.app/',
+    'https://crud-funcionario.vercel.app/'
+]
+
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: allowedOrigins,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type']
 }))
