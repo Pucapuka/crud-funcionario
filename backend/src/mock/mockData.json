@@ -1,0 +1,27 @@
+[
+    {
+        "nome": "João",
+        "idade": 23,
+        "funcao": "Porteiro",
+        "contratado_em": "2025-12-05",
+        "criado_em": "2025-12-05",
+        "atualizado_em": "2025-12-05"
+
+    },
+    {
+        "nome": "Pedro",
+        "idade": 28,
+        "funcao": "Recepcionista",
+        "contratado_em": "2025-11-02",
+        "criado_em": "2025-11-02",
+        "atualizado_em": "2025-11-02"
+    },
+    {
+        "nome": "Amanda",
+        "idade": 23,
+        "funcao": "Professora",
+        "contratado_em": "2025-10-03",
+        "criado_em": "2025-10-03",
+        "atualizado_em": "2025-10-03"
+    }
+]
