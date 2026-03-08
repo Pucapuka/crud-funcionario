@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import type { FuncionarioInput } from '../../types/funcionario.types';
+import type { Funcionario, FuncionarioInput } from '../../types/funcionario.types';
 
 interface Props {
+    funcionarioEditando: Funcionario | null;
     onAdicionar: (dados: FuncionarioInput) => Promise<void>;
+    onAtualizar: (dados: FuncionarioInput) => Promise<void>
     onCancel?: () => void;
 }
 

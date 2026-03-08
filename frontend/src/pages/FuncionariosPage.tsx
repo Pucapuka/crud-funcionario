@@ -10,7 +10,8 @@ const FuncionariosPage: React.FC = () => {
         loading,
         error,
         adicionarFuncionario,
-        removerFuncionario
+        removerFuncionario,
+        atualizarFuncionario,
     } = useFuncionario();
 
     const [mostrarForm, setMostrarForm] = useState(false);
@@ -21,9 +22,22 @@ const FuncionariosPage: React.FC = () => {
         setMostrarForm(false);
     }
 
+    const handleAtualizar = async (dados: any) => {
+        if(funcionarioEditando) {
+            await atualizarFuncionario(funcionarioEditando.id, dados);
+            setMostrarForm(false);
+            setFuncionarioEditando(null);
+        }
+    }
+
     const handleEditar = (funcionario: Funcionario) => {
         setFuncionarioEditando(funcionario);
         setMostrarForm(true);
+    }
+
+    const handleCancelar = () => {
+        setMostrarForm(false);
+        setFuncionarioEditando(null);
     }
 
     return (
@@ -40,8 +54,10 @@ const FuncionariosPage: React.FC = () => {
 
             {mostrarForm && (
                 <FuncionarioForm
+                    funcionarioEditando={funcionarioEditando}
                     onAdicionar={handleAdicionar}
-                    onCancel={() => setMostrarForm(false)}
+                    onAtualizar={handleAtualizar}
+                    onCancel={handleCancelar}
                 />
             )}
 

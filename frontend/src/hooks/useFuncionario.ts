@@ -54,6 +54,7 @@ export const useFuncionario = () => {
         error,
         adicionarFuncionario,
         removerFuncionario,
+        atualizarFuncionario,
         refresh: fetchFuncionarios
     }
 }
