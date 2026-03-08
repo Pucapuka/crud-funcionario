@@ -21,8 +21,8 @@
     "exactOptionalPropertyTypes": true,
 
     // CRÍTICO: Desabilitar opções problemáticas
-    "emitDeclarationOnly": true,    // 👈 Required for allowImportingTsExtensions
-    "allowImportingTsExtensions": true, // 👈 Não permitir import .ts
+    "emitDeclarationOnly": false,    // 👈 Gera .js e .d.ts
+    "allowImportingTsExtensions": false, // 👈 Não permitir import .ts
 
     // Recommended Options
     "strict": true,
@@ -32,5 +32,5 @@
     "skipLibCheck": true
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["node_modules"]
 }
