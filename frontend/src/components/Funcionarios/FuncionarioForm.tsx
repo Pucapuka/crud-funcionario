@@ -120,7 +120,7 @@ const styles = {
         border: '1px solid #ddd',
         borderRadius: '8px',
         backgroundColor: '#f9f9f9',
-        color: 'rgb(46, 44, 44)'
+        color: 'rgb(51, 48, 48)'
     },
     field: {
         marginBottom: '15px'
